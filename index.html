@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio FUN</title>
+
+    <!-- CSS External -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- Main Header -->
+    <header
+        class="flex items-center justify-between p-4 bg-[var(--primary-bg-color)] shadow-xl/30 border-b-4 border-[var(--hilight)]">
+        <!-- Logo -->
+        <a href="#home-page" class="hover:animate-spin">
+            <img class="border-4 border-[var(--btn-primary-color)] rounded-full h-[60px] w-[60px] main-logo shadow-xl"
+                src="/assets/images/illust_111931195_20240521_053055.jpg" alt="Logo">
+        </a>
+
+        <!-- Burger Button (mobile) -->
+        <button id="burgerBtn" class="md:hidden text-white focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+
+        <!-- Navbar Menu -->
+        <nav id="navMenu"
+            class="hidden md:flex absolute md:static top-[70px] left-0 w-full md:w-auto bg-[var(--primary-bg-color)] md:bg-transparent shadow-md md:shadow-none flex-col md:flex-row gap-2 md:gap-4 p-4 md:p-0 z-50">
+            <a href="#home-page"
+                class="font-medium text-[var(--text-color)] px-4 py-2 rounded-lg bg-[var(--btn-primary-color)] hover:text-white hover:bg-[var(--hilight)] shadow-xl">Home</a>
+            <a href="#leftPane"
+                class="font-medium text-[var(--text-color)] px-4 py-2 rounded-lg bg-[var(--btn-primary-color)] hover:text-white hover:bg-[var(--hilight)] shadow-xl">My
+                Profile</a>
+            <a href="#rightPane"
+                class="font-medium text-[var(--text-color)] px-4 py-2 rounded-lg bg-[var(--btn-primary-color)] hover:text-white hover:bg-[var(--hilight)] shadow-xl">My
+                Portfolio</a>
+            <a href="#message-us"
+                class="font-medium text-[var(--text-color)] px-4 py-2 rounded-lg bg-[var(--btn-primary-color)] hover:text-white hover:bg-[var(--hilight)] shadow-xl">Message
+                Us</a>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        <!-- Home -->
+        <section id="home-page"
+            class="flex flex-col items-center justify-center relative h-[400px] bg-gray-100 border-b-6 border-[var(--hilight)]">
+            <img src="/assets/images/128281336_p0.jpg" class="absolute w-full h-full">
+            <div class="flex flex-row justify-center items-center backdrop-blur-xs bg-black/30 w-full h-full">
+                <h1 class="absolute text-white font-semibold text-4xl font-mono animate-bounce">Hi! <span
+                        id="user-greeting"
+                        class="uppercase underline text-[var(--hilight)] font-sans font-bold"></span>, Welcome to FUN
+                    Protofolio</h1>
+            </div>
+        </section>
+
+        <!-- Our Profile -->
+        <div class="flex h-screen relative overflow-hidden border-b-6 border-[var(--hilight)]">
+
+            <div id="leftPane" class=" w-1/2 bg-[var(--primary-bg-color)] text-white text-center relative">
+                <div class="absolute flex items-center h-screen right-0 w-48">
+                    <div id="leftPaneButton"
+                        class="w-full h-30 rounded-l-xl shadow-xl text-xl font-bold flex items-center cursor-pointer transition duration-500 hover:scale-105 hover:text-[var(--hilight)] bg-[var(--secondary-bg-color)] text-[var(--text-color)] flex justify-center items-center">
+                        ⬅️ MY PROFILE
+                    </div>
+                </div>
+                <div class="flex flex-col items-center justify-center p-48 h-screen gap-10">
+                    <div class="text-4xl font-sans font-semibold text-shadow-lg/30">My Profile</div>
+
+                    <div class="w-full max-w-sm rounded-lg shadow-sm bg-[var(--secondary-bg-color)]">
+                        <div class="flex justify-end px-4 pt-4">
+                        </div>
+                        <div class="flex flex-col items-center pb-10">
+                            <img class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                                src="/assets/images/illust_111931195_20240521_053055.jpg" alt="Bonnie image" />
+                            <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Irfan Nur Wicaksono</h5>
+                            <span class="text-[13px] text-gray-500 dark:text-gray-400">Student - Universitas
+                                Muhammadiyah Purwokerto</span>
+                            <div class="grid grid-flow-col grid-rows-3 mt-4 md:mt-6 social-btn">
+
+                                <a href="https://web.facebook.com/embuh0/" target="_blank" rel="noopener noreferrer">
+                                    <button type="button"
+                                        class="text-white bg-[#3b5998] hover:scale-105 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center me-2 mb-2">
+                                        <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                            fill="currentColor" viewBox="0 0 8 19">
+                                            <path fill-rule="evenodd"
+                                                d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                        My Fesnuk
+                                    </button>
+                                </a>
+
+                                <a href="https://www.instagram.com/gaplek.l/" target="_blank" rel="noopener noreferrer">
+                                    <button type="button"
+                                        class="text-white bg-rose-500 hover:scale-105 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center me-2 mb-2">
+                                        <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                                        </svg>
+                                        My Instagram
+                                    </button>
+                                </a>
+
+                                <a href="https://discordapp.com/users/1038497745511661610" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <button type="button"
+                                        class="text-white bg-violet-900 hover:scale-105 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center me-2 mb-2">
+                                        <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612" />
+                                        </svg>
+                                        My Discord
+                                    </button>
+                                </a>
+
+                                <a href="https://steamcommunity.com/id/embuh/" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <button type="button"
+                                        class="text-white bg-blue-900 hover:scale-105 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center me-2 mb-2">
+                                        <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M.329 10.333A8.01 8.01 0 0 0 7.99 16C12.414 16 16 12.418 16 8s-3.586-8-8.009-8A8.006 8.006 0 0 0 0 7.468l.003.006 4.304 1.769A2.2 2.2 0 0 1 5.62 8.88l1.96-2.844-.001-.04a3.046 3.046 0 0 1 3.042-3.043 3.046 3.046 0 0 1 3.042 3.043 3.047 3.047 0 0 1-3.111 3.044l-2.804 2a2.223 2.223 0 0 1-3.075 2.11 2.22 2.22 0 0 1-1.312-1.568L.33 10.333Z" />
+                                            <path
+                                                d="M4.868 12.683a1.715 1.715 0 0 0 1.318-3.165 1.7 1.7 0 0 0-1.263-.02l1.023.424a1.261 1.261 0 1 1-.97 2.33l-.99-.41a1.7 1.7 0 0 0 .882.84Zm3.726-6.687a2.03 2.03 0 0 0 2.027 2.029 2.03 2.03 0 0 0 2.027-2.029 2.03 2.03 0 0 0-2.027-2.027 2.03 2.03 0 0 0-2.027 2.027m2.03-1.527a1.524 1.524 0 1 1-.002 3.048 1.524 1.524 0 0 1 .002-3.048" />
+                                        </svg>
+                                        My Steam
+                                    </button>
+                                </a>
+
+                                <a href="https://github.com/embuh75" target="_blank" rel="noopener noreferrer">
+                                    <button type="button"
+                                        class="text-white bg-[#24292F] hover:scale-105 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center me-2 mb-2">
+                                        <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd"
+                                                d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                        My Github
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="rightPane" class="w-1/2 bg-[var(--secondary-bg-color)] text-black text-center relative ">
+                <div class="absolute flex items-center h-screen left-0 w-48">
+                    <div id="rightPaneButton"
+                        class="w-full h-30 rounded-r-xl shadow-xl text-lg font-bold flex items-center cursor-pointer transition duration-500 hover:scale-105 hover:text-[var(--hilight)] bg-[var(--primary-bg-color)] text-[var(--text-color)] flex justify-center items-center">
+                        MY PROTOFOLIO ➡️
+                    </div>
+
+                </div>
+                <div class="flex flex-col gap-10 items-center p-10 text-center text-white h-screen overflow-y-auto">
+                    <div class="text-4xl font-sans font-semibold text-shadow-lg/30">My Protofolio</div>
+                    <div>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard
+                        dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
+                        to make a type specimen
+                        book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                        remaining essentially
+                        unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
+                        Ipsum passages, and more
+                        recently with desktop publishing software like Aldus PageMaker including versions of Lorem
+                        Ipsum.
+                    </div>
+
+                    <div class="text-4xl font-sans font-semibold text-shadow-lg/30">My Gallery</div>
+
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 gallery">
+                        <div class="grid gap-4">
+                            <img class="h-auto max-w-full rounded-lg" src="/assets/images/108328583-large.gif" alt="">
+                        </div>
+                        <div class="grid gap-4">
+                            <img class="h-auto max-w-full rounded-lg" src="/assets/images/123557369-large.gif" alt="">
+                        </div>
+                        <div class="grid gap-4">
+                            <img class="h-auto max-w-full rounded-lg" src="/assets/images/128281336_p0.jpg" alt="">
+                        </div>
+                        <div class="grid gap-4">
+                            <img class="h-auto max-w-full rounded-lg" src="/assets/images/20241231_142713.jpg" alt="">
+                        </div>
+                        <div class="grid gap-4">
+                            <img class="h-auto max-w-full rounded-lg" src="/assets/images/20241231_142715.jpg" alt="">
+                        </div>
+                        <div class="grid gap-4">
+                            <img class="h-auto max-w-full rounded-lg" src="/assets/images/20241231_142717.jpg" alt="">
+                        </div>
+                        <div class="grid gap-4">
+                            <img class="h-auto max-w-full rounded-lg" src="/assets/images/20250607_215521.jpg" alt="">
+                        </div>
+                        <div class="grid gap-4">
+                            <img class="h-auto max-w-full rounded-lg" src="/assets/images/20250607_215523.jpg" alt="">
+                        </div>
+                        <div class="grid gap-4">
+                            <img class="h-auto max-w-full rounded-lg" src="/assets/images/Absolute_Correction.jpg"
+                                alt="">
+                        </div>
+                        <div class="grid gap-4">
+                            <img class="h-auto max-w-full rounded-lg" src="/assets/images/FB_IMG_1715279298276.jpg"
+                                alt="">
+                        </div>
+                        <div class="grid gap-4">
+                            <img class="h-auto max-w-full rounded-lg" src="/assets/images/FB_IMG_1717329377500.jpg"
+                                alt="">
+                        </div>
+                        <div class="grid gap-4">
+                            <img class="h-auto max-w-full rounded-lg" src="/assets/images/jawa.gif" alt="">
+                        </div>
+                    </div>
+
+                    <!-- Modal Zoom -->
+                    <div id="imageModal" class="fixed inset-0 bg-black/70 hidden justify-center items-center z-50">
+                        <span id="closeModal"
+                            class="absolute top-5 right-5 text-white text-3xl cursor-pointer">&times;</span>
+                        <img id="modalImage" class="max-w-[90%] max-h-[90%] rounded-lg shadow-lg" src=""
+                            alt="Zoomed Image">
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Message Us -->
+        <section
+            class="flex flex-col md:flex-row gap-10 p-5 font-sans bg-[var(--btn-primary-color)] border-b-6 border-[var(--hilight)]">
+
+            <!-- Form -->
+            <form id="messageForm"
+                class="flex-1 bg-[var(--primary-bg-color)] shadow-xl/30 p-5 rounded-lg space-y-4 text-white">
+                <h2 class="text-xl font-bold mb-4">Message Us</h2>
+
+                <div class="flex items-center">
+                    <label class="w-32">Nama :</label>
+                    <input id="nama" type="text" placeholder="Nama"
+                        class="flex-1 border border-[var(--hilight)] rounded px-2 py-1">
+                </div>
+
+                <div class="flex items-center">
+                    <label class="w-32">Tanggal Lahir :</label>
+                    <input id="tanggalLahir" type="date"
+                        class="flex-1 border border-[var(--hilight)] accent-[var(--hilight)] rounded px-2 py-1">
+                </div>
+
+                <div class="flex items-center">
+                    <label class="w-32">Jenis Kelamin :</label>
+                    <div class="flex gap-3">
+                        <label class="flex items-center gap-1">
+                            <input type="radio" name="gender" value="Laki-Laki" class="accent-[var(--hilight)]">
+                            Laki-Laki
+                        </label>
+                        <label class="flex items-center gap-1">
+                            <input type="radio" name="gender" value="Perempuan" class="accent-[var(--hilight)]">
+                            Perempuan
+                        </label>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <label class="w-32 mt-1">Pesan :</label>
+                    <textarea id="pesan" placeholder="Pesan"
+                        class="flex-1 border border-[var(--hilight)] rounded px-2 py-1 h-28"></textarea>
+                </div>
+
+                <div>
+                    <button type="submit"
+                        class="w-full bg-[var(--btn-primary-color)] hover:text-white hover:bg-[var(--hilight)] shadow-xl rounded py-2 cursor-pointer transition">
+                        Submit
+                    </button>
+                </div>
+            </form>
+
+            <!-- Output -->
+            <div id="outputBox"
+                class="flex-1 bg-[var(--primary-bg-color)] shadow-xl/30 p-5 rounded-lg space-y-2 text-white">
+                <p><strong>Current time :</strong> <span id="currentTime"></span></p>
+                <p><strong>Nama :</strong> <span id="outNama">-</span></p>
+                <p><strong>Tanggal Lahir :</strong> <span id="outTanggal">-</span></p>
+                <p><strong>Jenis Kelamin :</strong> <span id="outGender">-</span></p>
+                <p><strong>Pesan :</strong> <span id="outPesan">-</span></p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Popup Warning -->
+    <div id="mobile-warning"
+        class="hidden fixed inset-0 bg-black bg-opacity-80 z-[9999] flex items-center justify-center p-4">
+        <div
+            class="flex flex-col items-center justify-center bg-gray-900 text-white rounded-lg shadow-lg max-w-sm w-full p-6 text-center">
+            <div class="flex items-center gap-2 text-xl font-bold mb-4">
+                <span>⚠</span>
+                <span>Website Tidak Mendukung Mobile</span>
+                <span>⚠</span>
+            </div>
+            <img src="/assets/images/ERPENDIDIKA.png" alt="cerdas" class="w-70 h-70">
+            <div>
+                <p class="mb-2">Mohon gunakan perangkat dengan layar yang lebih besar atau gunakan mode desktop di
+                    browser anda!</p>
+                <p>untuk pengalaman terbaik.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[var(--primary-bg-color)] rounded-lg shadow-sm m-4">
+        <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+            <span class="text-sm text-gray-500 sm:text-center text-white">© 2025 <a href="https://flowbite.com/"
+                    class="hover:underline">FUN™</a>. All Rights Reserved.
+            </span>
+            <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-white sm:mt-0">
+                <li>
+                    <a href="#" class="hover:underline me-4 md:me-6">About</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:underline">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- JS External -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
